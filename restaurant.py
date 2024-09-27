@@ -1,7 +1,8 @@
-# Eto lang yung basic functions ng mga code, sa weekend natin planuhin kung ano yung mga ilalagay natin. I think
+# Eto lang yung basic functions ng mga code, sa weekend (or kung ano time kayo pede) natin planuhin kung ano yung mga ilalagay natin. I think
 # Menu lang yung pinaka important based dun sa Rubric kaya kahit siguro dina masyadong complex yung code
 
 def show_main_menu():
+    
     """
     1. View Menu
     2. Place Order
@@ -9,21 +10,30 @@ def show_main_menu():
     """
 
 def view_menu():
+    
     """
-    Show each menu directly || Seperate by Category
-    """
-
-# Only if Category will be implemented
-# Dependent on complexity
-def show_category():
-    """
-    Menu in specific Category
+    Show restaurant's Menu
+    in this format
+        Here's our menu
+        Beverages
+            Drink: Price
+            Drink: Price
+        Meals
+            Dish: Price
+            Dish: Price
+        Idea:
+            IDK: Price
+            IDK: Price
     """
 
 def place_order():
+    
     """
-    Adding and Deleting Items
-    ie. add_item(), delete_item()
+    Manages order placement
+
+    implement
+    add_item()
+    delete_item()
     """
 
 def add_item():
@@ -32,23 +42,26 @@ def add_item():
     """
 
 def delete_item():
+    
     """
     Delete item
     """
 
 def confirm_order():
+    
     """
     ???
     """
 def process_payment():
+    
     """
     ???
     """
 
 def main():
+    
     """
     System Logic Starts Here
-
     Di pa alam anong gagawin (Weekend)
     """
 
