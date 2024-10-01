@@ -1,0 +1,75 @@
+Start
+
+--Main Menu (Start of Program)--
+
+1. View Menu
+2. Place Order
+// Summary --> Sales, 
+3. Exit (Terminate Program)
+
+--View Menu-- (Option 1)
+
+Appetizer
+  - Food
+  - Food
+Main Course
+  - Food
+  - Food
+  ++
+Desserts
+  - Food
+  - Food
+Drinks
+  - Food
+  - Food
+  ++
+
+Proceed Order
+
+--Place Order--
+Cuurent Orders
+Total Price
+
+By Quantity
+1. Appetizer
+2. Meals
+3. Desserts
+4. Drinks
+5. Review order
+
+    -- User Input --
+    Example: Appetizer
+      1. Food
+      2. Food
+
+  
+      Add Item()
+      
+      Remove Item()
+      Match Index or by value
+      Prompt Quantity
+      
+      
+      Tax 1.12
+      Discount (PWD 0.20, Senior 0.20)
+
+Payment:
+
+  Insufficient // Cancel Or Modify
+  Back
+  Change
+
+  Mode of Payment
+
+  -> Receit
+
+  -> Proceed to Order {}
+
+  
+
+
+
+
+
+
+
