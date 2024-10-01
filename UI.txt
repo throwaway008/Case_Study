@@ -4,7 +4,7 @@ Start
 
 1. View Menu
 2. Place Order
-// Summary --> Sales, 
+// Summary --> Sales, etc
 3. Exit (Terminate Program)
 
 --View Menu-- (Option 1)
@@ -15,27 +15,26 @@ Appetizer
 Main Course
   - Food
   - Food
-  ++
+  // Add More
 Desserts
   - Food
   - Food
 Drinks
   - Food
   - Food
-  ++
 
 Proceed Order
 
 --Place Order--
-Cuurent Orders
-Total Price
+  Cuurent Orders
+  Total Price
 
-By Quantity
-1. Appetizer
-2. Meals
-3. Desserts
-4. Drinks
-5. Review order
+  By Quantity
+  1. Appetizer
+  2. Meals
+  3. Desserts
+  4. Drinks
+  5. Review order
 
     -- User Input --
     Example: Appetizer
@@ -43,9 +42,10 @@ By Quantity
       2. Food
 
   
-      Add Item()
+      Add Item 
       
-      Remove Item()
+      Remove Item
+
       Match Index or by value
       Prompt Quantity
       
@@ -61,9 +61,9 @@ Payment:
 
   Mode of Payment
 
-  -> Receit
+  Show Receit
 
-  -> Proceed to Order {}
+Proceed to next Order
 
   
 
