@@ -166,8 +166,10 @@ def payment():
 
         else: print("Invalid Selection")
 
-    print(f"\t Tax (15%): ${totalPrice * 0.15:,.2f}")
-    print(f"\t Total Price with Tax: ${totalPrice + (totalPrice * 0.15):,.2f}")
+    tax = totalPrice * 0.15
+    total_with_tax = totalPrice + tax
+    print(f"\t Tax (15%): ${tax:,.2f}")
+    print(f"\t Total Price with Tax: ${total_with_tax:,.2f}")
 
     while True:
         amount_input = input("Please enter your payment amount: ")
@@ -175,28 +177,26 @@ def payment():
         if amount_input.isdigit():
             payment_amount = int(amount_input)
 
+            if payment_amount > totalPrice:
+                print(f"Amount Due: ${payment_amount - totalPrice:,.2f}")
+
+                for order in currentOrder:
+                    completed_orders.append(order)
+
+                break
+
+            elif payment_amount < totalPrice:
+                print(f"\tInsufficient funds")
+                print(f"\tPlease try again")
+
+            else:
+                print("Thank You")
+
         else:
             print("Invalid input")
 
-
-        if payment_amount > totalPrice:
-            print(f"Amount Due: ${payment_amount - totalPrice:,.2f}")
-
-            for order in currentOrder:
-                completed_orders.append(order)
-
-            return True
-
-
-        elif payment_amount < totalPrice:
-            print(f"\tInsufficient funds")
-            print(f"\tPlease try again")
-
-        else:
-            print("Thank You")
-
-
-
+    currentOrder.clear()
+    return True
 
 
 def view_sales_summary():
@@ -211,7 +211,7 @@ def view_sales_summary():
     for order in completed_orders:
         category, item, quantity = order
 
-        print(f"{menu_categories[category][item]} - ${menu_prices[category][item]}")
+        print(f"{menu_items[category][item]} - ${menu_prices[category][item]}")
 
 
 def place_order():
@@ -239,12 +239,12 @@ def place_order():
                             remove_item()
                         elif sub_choice == "2":
                             if payment():
-                                print("Here")
+                                currentOrder = []
                                 return
                         elif sub_choice == "3":
                             break
                 else:
-                    print("-------------------------------")
+                    print("No current orders")
             case "3":
                 while True:
                     make_sure = input("Are you sure you would like to cancel the order? yes/no").lower()
@@ -279,9 +279,7 @@ def main():
 
             if submenu_choice == "2":
                 place_order()
-
-
-
+                return
             else:
                 print("--> Invalid Input | Please select again <--")
 
